@@ -30,7 +30,6 @@ const tweet = async () => {
     const mediaId = await twitterClient.v1.uploadMedia(filePath);
     console.log(mediaId);
     await twitterClient.v2.tweet({
-      // text: 'Here is a random image!',   //description of the tweet
       text: joke,
       media: {
         media_ids: [mediaId],
@@ -45,9 +44,6 @@ const tweet = async () => {
     console.error('Failed to tweet:', error);
   }
 };
-
-
-
 
 tweet();
 
