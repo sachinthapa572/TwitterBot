@@ -18,6 +18,7 @@ const tweet = async () => {
     if (!joke) {
       throw new Error('Failed to get a joke. No joke returned.');
     }
+    console.log(joke);
 
     const filePath = `./assets/images/${filename}`;
 
